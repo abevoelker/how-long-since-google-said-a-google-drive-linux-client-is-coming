@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>How long since Google said a Google Drive Linux client is coming?</title>
+        <meta name="description" content="It's been way too long since Google said to &quot;hang tight.&quot;">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- TODO -->
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="" />
+        <meta property="og:image:height" content="" />
+        <meta property="og:description" content="It's been way too long since Google said to &quot;hang tight.&quot;" />
+        <meta property="twitter:card" content="summary" />
+        <!-- TODO -->
+        <meta property="twitter:url" content="" />
+        <meta property="twitter:description" content="It's been way too long since Google said to &quot;hang tight.&quot;" />
+        <meta property="twitter:creator" content="abevoelker" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <style>
+          html, body {
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              height: 100%;
+              display: table
+          }
+          #content {
+              display: table-cell;
+              text-align: center;
+          }
+        </style>
+    </head>
+    <body>
+
+      <div class="container" id="content">
+        <div class="page-header">
+          <h1 id="since" title="Tue Apr 24 17:25:22 2012 -0600" datetime="2012-04-24T17:25:22-06:00">
+            Too many years
+          </h1>
+        </div>
+        <p>
+          have elapsed since <a href="https://plus.google.com/u/0/+ChadMcCullough/posts/SxDNKR7ehSL">Google said to "hang tight" about Linux support for Google Drive</a>.
+        </p>
+        <p>
+          <strong><a href="https://tools.google.com/dlpage/drive">We're still waiting</a></strong>.
+        </p>
+        <a href="https://plus.google.com/u/0/+ChadMcCullough/posts/SxDNKR7ehSL">
+          <img class="img-rounded" src="img/waiting.gif"></img>
+        </a>
+        <hr />
+        <p class="text-muted">
+          Made with frustration by <a href="https://twitter.com/abevoelker">@abevoelker</a>
+        </p>
+      </div>
+
+      <script src="js/moment.min.js"></script>
+      <script src="js/moment-precise-range.min.js"></script>
+      <script>
+        var announced = moment.utc('2012-04-24T17:25:22-06:00'); //.startOf('day');
+        var since = document.getElementById('since');
+        var render = function() {
+          var now = moment(); //.startOf('day');
+          since.innerHTML = moment.preciseDiff(announced, now);
+        }
+        render();
+        this.interval = setInterval(render, 1000);
+      </script>
+    </body>
+</html>
